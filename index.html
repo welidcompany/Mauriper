@@ -2,27 +2,24 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>متجر البراء لبيع الأمساك</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
-    header { background-color: #222; color: white; padding: 20px; text-align: center; font-size: 24px; }
+    header { background-color: #222; color: #fff; padding: 20px; text-align: center; font-size: 24px; }
     nav { background-color: #444; padding: 15px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; }
-    .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
-    .product {
-      background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 20px; text-align: center;
-    }
+    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 18px; font-weight: bold; }
+    .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
+    .product { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; text-align: center; }
     .product img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
     .product h3 { font-size: 20px; margin: 10px 0; }
     .product p { font-size: 18px; margin: 5px 0; }
-    .buy-btn {
-      display: block; background-color: #25d366; color: white;
-      padding: 12px; margin-top: 10px; border: none; border-radius: 6px;
-      font-size: 18px; cursor: pointer;
-      text-decoration: none;
+    .buy-btn { display: block; width: 100%; background-color: #25d366; color: #fff; border: none; border-radius: 6px; padding: 12px; font-size: 18px; cursor: pointer; text-decoration: none; }
+    @media (max-width: 400px) {
+      header { font-size: 20px; }
+      nav a { margin: 0 10px; font-size: 16px; }
+      .buy-btn { font-size: 16px; padding: 10px; }
     }
   </style>
 </head>
@@ -35,87 +32,87 @@
   </nav>
   <div class="products">
 
-    <!-- 1. Gucci – 3500 أوقية جديدة -->
+    <!-- 1. Gucci – 3500 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من i">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الأولى)" alt="Gucci">
       <h3>Gucci</h3>
       <p>السعر: 3500 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Gucci', 3500)">شراء</button>
     </div>
 
-    <!-- 2. Jean Paul Eau de Parfum – 5700 أوقية جديدة -->
+    <!-- 2. Jean Paul Eau de Parfum – 5700 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من  Paul Eau de Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الثانية)" alt="Jean Paul Eau de Parfum">
       <h3>Jean Paul Eau de Parfum</h3>
       <p>السعر: 5700 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Jean Paul Eau de Parfum', 5700)">شراء</button>
     </div>
 
-    <!-- 3. Jean Paul Elixir – 7500 أوقية جديدة -->
+    <!-- 3. Jean Paul Elixir – 7500 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من  Paul Elixir">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الثالثة)" alt="Jean Paul Elixir">
       <h3>Jean Paul Elixir</h3>
       <p>السعر: 7500 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Jean Paul Elixir', 7500)">شراء</button>
     </div>
 
-    <!-- 4. Sauvage Parfum – 7000 أوقية جديدة -->
+    <!-- 4. Sauvage Parfum – 7000 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من age Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الرابعة)" alt="Sauvage Parfum">
       <h3>Sauvage Parfum</h3>
       <p>السعر: 7000 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Sauvage Parfum', 7000)">شراء</button>
     </div>
 
-    <!-- 5. Sauvage Eau de Parfum – 5900 أوقية جديدة -->
+    <!-- 5. Sauvage Eau de Parfum – 5900 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من ge Eau de Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الخامسة)" alt="Sauvage Eau de Parfum">
       <h3>Sauvage Eau de Parfum</h3>
       <p>السعر: 5900 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Sauvage Eau de Parfum', 5900)">شراء</button>
     </div>
-
-    <!-- 6. Bleu de Chanel Parfum – 6700 أوقية جديدة -->
+    
+    <!-- 6. Bleu de Chanel Parfum – 6700 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من u de Chanel Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة السادسة)" alt="Bleu de Chanel Parfum">
       <h3>Bleu de Chanel Parfum</h3>
       <p>السعر: 6700 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Bleu de Chanel Parfum', 6700)">شراء</button>
     </div>
 
-    <!-- 7. Bleu de Chanel Eau de Parfum – 6200 أوقية جديدة -->
+    <!-- 7. Bleu de Chanel Eau de Parfum – 6200 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من  de Chanel Eau de Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة السابعة)" alt="Bleu de Chanel Eau de Parfum">
       <h3>Bleu de Chanel Eau de Parfum</h3>
       <p>السعر: 6200 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Bleu de Chanel Eau de Parfum', 6200)">شراء</button>
     </div>
 
-    <!-- 8. Armani Code Eau de Parfum – 4700 أوقية جديدة -->
+    <!-- 8. Armani Code Eau de Parfum – 4700 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* السلسلة الكاملة من ni Code Eau de Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة الثامنة)" alt="Armani Code Eau de Parfum">
       <h3>Armani Code Eau de Parfum</h3>
       <p>السعر: 4700 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Armani Code Eau de Parfum', 4700)">شراء</button>
     </div>
 
-    <!-- 9. Yves Saint Laurent Y Eau de Parfum – 6800 أوقية جديدة -->
+    <!-- 9. YSL Y Eau de Parfum – 6800 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* ضع هنا Base64 من مصدر خاص بك */" alt="YSL Y Eau de Parfum">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة التاسعة)" alt="YSL Y Eau de Parfum">
       <h3>YSL Y Eau de Parfum</h3>
       <p>السعر: 6800 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('YSL Y Eau de Parfum', 6800)">شراء</button>
     </div>
 
-    <!-- 10. Gucci Bloom – 5500 أوقية جديدة -->
+    <!-- 10. Gucci Bloom – 5500 -->
     <div class="product">
-      <img src="data:image/jpeg;base64,/* ضع هنا Base64 من مصدر خاص بك */" alt="Gucci Bloom">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD... (Base64 كامل للصورة العاشرة)" alt="Gucci Bloom">
       <h3>Gucci Bloom</h3>
       <p>السعر: 5500 أوقية جديدة</p>
       <button class="buy-btn" onclick="startOrder('Gucci Bloom', 5500)">شراء</button>
     </div>
 
-  </div>
+  </div><!-- نهاية .products -->
 
   <script>
     function startOrder(name, price) {
@@ -124,4 +121,4 @@
     }
   </script>
 </body>
-</html>
+      </html>
