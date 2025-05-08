@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الطلبات</title>
-  
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
-  header { background-color: #222; color: white; padding: 20px; text-align: center; font-size: 22px; }
-  nav { background-color: #444; padding: 10px; text-align: center; }
-  nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
-  .container { padding: 20px; max-width: 600px; margin: auto; }
-  .product, .order, .form-group { background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  .product img { width: 100%; border-radius: 8px; }
-  .product h3, .order h3 { font-size: 18px; margin-bottom: 10px; }
-  .product p, .order p { font-size: 16px; }
-  .buy-btn, .submit-btn { background-color: #25d366; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-size: 16px; width: 100%; margin-top: 10px; }
-  .form-group input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
-  .button { display: inline-block; padding: 12px 25px; background-color: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 18px; margin-top: 20px; }
-</style>
-
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
+    header {
+      background-color: #222; color: #fff;
+      padding: 20px; text-align: center;
+      font-size: 26px;
+    }
+    nav {
+      background-color: #444; text-align: center;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white; text-decoration: none;
+      margin: 0 20px; font-size: 20px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 600px; margin: 30px auto;
+      padding: 0 20px;
+    }
+    .order {
+      background: #fff; border-radius: 10px;
+      padding: 25px; margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .order h3 {
+      font-size: 22px; margin-bottom: 15px;
+    }
+    .order p {
+      font-size: 18px; margin: 8px 0;
+    }
+    @media (max-width: 400px) {
+      header { font-size: 22px; }
+      nav a { margin: 0 10px; font-size: 18px; }
+      .order { padding: 20px; }
+    }
+  </style>
 </head>
 <body>
   <header>صفحة الطلبات</header>
   <nav>
     <a href="index.html">الرئيسية</a>
     <a href="contact.html">تواصل معنا</a>
+    <a href="orders.html">الطلبات</a>
   </nav>
-  <div class="container" id="orders-container"></div>
+  <div class="container" id="orders-container">
+    <!-- سيتم تعبئة الطلبات هنا بواسطة الجافاسكربت -->
+  </div>
+
   <script>
     const orders = JSON.parse(localStorage.getItem('orders') || '[]');
     const container = document.getElementById('orders-container');
+
     if (orders.length === 0) {
-      container.innerHTML = '<p>لا توجد طلبات حالياً.</p>';
+      container.innerHTML = '<p style="text-align:center; font-size:18px;">لا توجد طلبات حالياً.</p>';
     } else {
       orders.forEach(order => {
         container.innerHTML += `
