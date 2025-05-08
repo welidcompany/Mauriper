@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر البراء لبيع الأمساك</title>
+  
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
+  header { background-color: #222; color: white; padding: 20px; text-align: center; font-size: 22px; }
+  nav { background-color: #444; padding: 15px; text-align: center; }
+  nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; }
+  .container { padding: 20px; max-width: 100%; margin: auto; }
+  .product, .order, .form-group {
+    background: white; padding: 20px; border-radius: 10px;
+    margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .product img { width: 100%; max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+  .product h3, .order h3 { font-size: 22px; margin-bottom: 10px; }
+  .product p, .order p { font-size: 18px; }
+  .buy-btn, .submit-btn {
+    background-color: #25d366; color: white;
+    padding: 15px; width: 100%;
+    border: none; border-radius: 8px;
+    font-size: 18px; margin-top: 10px;
+  }
+  .form-group input {
+    width: 100%; padding: 12px;
+    border: 1px solid #ccc; border-radius: 6px;
+    font-size: 16px; margin-top: 8px;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+</style>
+
+</head>
+<body>
+  <header>مرحبًا بكم في متجر البراء لبيع الأمساك</header>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="orders.html">الطلبات</a>
+  </nav>
+  <div class="container">
+    <div class="product">
+      <img src="https://via.placeholder.com/600x400?text=Bleu+de+Chanel" alt="Bleu de Chanel">
+      <h3>Bleu de Chanel Parfum</h3>
+      <p>السعر: 6700 أوقية جديدة</p>
+      <button class="buy-btn" onclick="startOrder('Bleu de Chanel Parfum', 6700)">شراء</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/600x400?text=Armani+Code" alt="Armani Code">
+      <h3>Armani Code Eau de Parfum</h3>
+      <p>السعر: 4700 أوقية جديدة</p>
+      <button class="buy-btn" onclick="startOrder('Armani Code Eau de Parfum', 4700)">شراء</button>
+    </div>
+  </div>
+  <script>
+    function startOrder(name, price) {
+      localStorage.setItem('pendingProduct', JSON.stringify({name, price}));
+      window.location.href = 'checkout.html';
+    }
+  </script>
+</body>
+</html>
