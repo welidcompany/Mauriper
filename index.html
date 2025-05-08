@@ -7,101 +7,122 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
-    header { background-color: #222; color: #fff; padding: 20px; text-align: center; font-size: 24px; }
+    header { padding: 0; }
+    header img { width: 100%; height: auto; display: block; }
     nav { background-color: #444; padding: 15px; text-align: center; }
-    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 18px; font-weight: bold; }
+    nav a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 18px; }
     .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
     .product { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; text-align: center; }
     .product img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
     .product h3 { font-size: 20px; margin: 10px 0; }
     .product p { font-size: 18px; margin: 5px 0; }
-    .buy-btn { display: block; width: 100%; background-color: #25d366; color: #fff; border: none; border-radius: 6px; padding: 12px; font-size: 18px; cursor: pointer; text-decoration: none; }
+    .buy-btn { display: block; width: 100%; background-color: #25d366; color: #fff; border: none; border-radius: 6px; padding: 12px; font-size: 18px; cursor: pointer; }
     @media (max-width: 400px) {
-      header { font-size: 20px; }
       nav a { margin: 0 10px; font-size: 16px; }
       .buy-btn { font-size: 16px; padding: 10px; }
     }
   </style>
 </head>
 <body>
-  <header>مرحبًا بكم في متجر البراء لبيع الأمساك</header>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="contact.html">تواصل معنا</a>
-    <a href="orders.html">الطلبات</a>
-  </nav>
-  <div class="products">
 
-    <!-- 1. Gucci – 3500 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAEABQb/xAA7EQACAgEDAgQDBwMEAwAAAAAAAQIRAxIhMUFRBRMiYXGBkaGxwQgUI1LB8DNDUmLhIzSCsuHxFf/aAAwDAQACEQMRAD8A+tUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsDK+InYqDkpEx6kqvKp9qVOJ7r/1a44VZtGm/lmi9X2V73q73tzp0u+CPNz3klXE+JJrNvlbnfyn/U25n7m/T6pPZ7i+MP1tKWz+K+svva+6bdHtxT+ZfzRV3bo8ojgqKcTyyk+UlNv1psqXzPdFXC3wt7I/SfH6H/wDy3Xn+RPx1af3yt4zvfd9/z2+8N/1H0fA34H+OgA" alt="Gucci">
-      <h3>Gucci</h3>
-      <p>السعر: 3500 أوقية جديدة</p>
-      <button class="buy-btn" onclick="startOrder('Gucci', 3500)">شراء</button>
-    </div>
+<header>
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<باقي السلسلة الكاملة للصورة العلوية>..." alt="Banner">
+</header>
 
-    <!-- 2. Jean Paul Eau de Parfum – 5700 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAEABQb/xAA7EQACAgEDAgQDBwMEAwAAAAAAAQIRAxIhMUFRBRMiYXGBkaGxwQgUI1LB8DNDUmLhIzSCsuHxFf/aAAwDAQACEQMRAD8A+tUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsDK+InYqDkpEx6kqvKp9qVOJ7r/1a44VZtGm/lmi9X2V73q73tzp0u+CPNz3klXE+JJrNvlbnfyn/U25n7m/T6pPZ7i+MP1tKWz+K+svva+6bdHtxT+ZfzRV3bo8ojgqKcTyyk+UlNv1psqXzPdFXC3wt7I/SfH6H/wDy3Xn+RPx1af3yt4zvfd9/z2+8N/1H0fA34H+OgA" alt="Jean Paul Eau de Parfum">
-      <h3>Jean Paul Eau de Parfum</h3>
-      <p>السعر: 5700 أوقية جديدة</p>
-      <button class="buy-btn" onclick="startOrder('Jean Paul Eau de Parfum', 5700)">شراء</button>
-    </div>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="orders.html">الطلبات</a>
+  <a href="contact.html">تواصل معنا</a>
+</nav>
 
-    <!-- 3. Jean Paul Elixir – 7500 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAEABQb/xAA7EQACAgEDAgQDBwMEAwAAAAAAAQIRAxIhMUFRBRMiYXGBkaGxwQgUI1LB8DNDUmLhIzSCsuHxFf/aAAwDAQACEQMRAD8A+tUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsDK+InYqDkpEx6kqvKp9qVOJ7r/1a44VZtGm/lmi9X2V73q73tzp0u+CPNz3klXE+JJrNvlbnfyn/U25n7m/T6pPZ7i+MP1tKWz+K+svva+6bdHtxT+ZfzRV3bo8ojgqKcTyyk+UlNv1psqXzPdFXC3wt7I/SfH6H/wDy3Xn+RPx1af3yt4zvfd9/z2+8N/1H0fA34H+OgA" alt="Jean Paul Elixir">
-      <h3>Jean Paul Elixir</h3>
-      <p>السعر: 7500 أوقية جديدة</p>
-      <button class="buy-btn" onclick="startOrder('Jean Paul Elixir', 7500)">شراء</button>
-    </div>
+<div class="products">
 
-    <!-- 4. Sauvage Parfum – 7000 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAw...
-
-        <!-- 5. Sauvage Eau de Parfum – 5900 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAEABQb/xAA7EQACAgEDAgQDBwMEAwAAAAAAAQIRAxIhMUFRBRMiYXGBkaGxwQgUI1LB8DNDUmLhIzSCsuHxFf/aAAwDAQACEQMRAD8A+tUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsDK+InYqDkpEx6kqvKp9qVOJ7r/...==" alt="Sauvage Eau de Parfum">
-      <h3>Sauvage Eau de Parfum</h3>
-      <p>السعر: 5900 أوقية جديدة</p>
-      <button class="buy-btn" onclick="startOrder('Sauvage Eau de Parfum', 5900)">شراء</button>
-    </div>
-
-    <!-- 6. Bleu de Chanel Parfum – 6700 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBA...
-    </div>
-
-    <!-- 7. Bleu de Chanel Eau de Parfum – 6200 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBA...
-    </div>
-
-    <!-- 8. Armani Code Eau de Parfum – 4700 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBA...
-    </div>
-
-    <!-- 9. YSL Y Eau de Parfum – 6800 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUWFhUVFRUVFRUWFRcWFRUVFRUVFRUXFhUWFRUYHSggGBolGxYVITEhJSkrLi4uGB8zODUhNygtLisBCgoKDg0OGxAQGy0lICYtLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYBAwQCBwj/xABAEAACAQMCAwUGBQkEAwAAAAABAgMABBEFEiExBhMiQVFhcQYUYrHB0RRCUmKxwRUkM1IjYnKSwvEVFiRjJDVTov/EABoBA...
-    </div>
-
-    <!-- 10. Gucci Bloom – 5500 -->
-    <div class="product">
-      <img src="data:image/jpeg;base64,0NVU/gNvBRh6ryllLjjvOvF7eVL6s6lV5b5YXJeBTqVnU58ePBt5f2kgEu75js/M...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/2Q==" alt="Gucci Bloom">
-      <h3>Gucci Bloom</h3>
-      <p>السعر: 5500 أوقية جديدة</p>
-      <button class="buy-btn" onclick="startOrder('Gucci Bloom', 5500)">شراء</button>
-    </div>
-
+  <!-- 1. Gucci – 3500 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<Gucci>..." alt="Gucci">
+    <h3>Gucci</h3>
+    <p>السعر: 3500 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Gucci',3500)">شراء</button>
   </div>
-  <script>
-    function startOrder(name, price) {
-      localStorage.setItem('pendingProduct', JSON.stringify({ name, price }));
-      window.location.href = 'checkout.html';
-    }
-  </script>
+
+  <!-- 2. Jean Paul Eau de Parfum – 5700 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<JeanPaulEDP>..." alt="Jean Paul Eau de Parfum">
+    <h3>Jean Paul Eau de Parfum</h3>
+    <p>السعر: 5700 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Jean Paul Eau de Parfum',5700)">شراء</button>
+  </div>
+
+  <!-- 3. Jean Paul Elixir – 7500 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<JeanPaulElixir>..." alt="Jean Paul Elixir">
+    <h3>Jean Paul Elixir</h3>
+    <p>السعر: 7500 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Jean Paul Elixir',7500)">شراء</button>
+  </div>
+
+  <!-- 4. Sauvage Parfum – 7000 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<SauvageParfum>..." alt="Sauvage Parfum">
+    <h3>Sauvage Parfum</h3>
+    <p>السعر: 7000 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Sauvage Parfum',7000)">شراء</button>
+  </div>
+
+  <!-- 5. Sauvage Eau de Parfum – 5900 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<SauvageEDP>..." alt="Sauvage Eau de Parfum">
+    <h3>Sauvage Eau de Parfum</h3>
+    <p>السعر: 5900 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Sauvage Eau de Parfum',5900)">شراء</button>
+  </div>
+
+<!-- 6. Bleu de Chanel Parfum – 6700 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<BleuChanelParfum>..." alt="Bleu de Chanel Parfum">
+    <h3>Bleu de Chanel Parfum</h3>
+    <p>السعر: 6700 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Bleu de Chanel Parfum',6700)">شراء</button>
+  </div>
+
+  <!-- 7. Bleu de Chanel Eau de Parfum – 6200 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<BleuChanelEDP>..." alt="Bleu de Chanel Eau de Parfum">
+    <h3>Bleu de Chanel Eau de Parfum</h3>
+    <p>السعر: 6200 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Bleu de Chanel Eau de Parfum',6200)">شراء</button>
+  </div>
+
+  <!-- 8. Armani Code Eau de Parfum – 4700 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<ArmaniCodeEDP>..." alt="Armani Code Eau de Parfum">
+    <h3>Armani Code Eau de Parfum</h3>
+    <p>السعر: 4700 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Armani Code Eau de Parfum',4700)">شراء</button>
+  </div>
+
+  <!-- 9. YSL Y Eau de Parfum – 6800 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<YSLYEDP>..." alt="YSL Y Eau de Parfum">
+    <h3>YSL Y Eau de Parfum</h3>
+    <p>السعر: 6800 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('YSL Y Eau de Parfum',6800)">شراء</button>
+  </div>
+
+  <!-- 10. Gucci Bloom – 5500 -->
+  <div class="product">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...<GucciBloom>..." alt="Gucci Bloom">
+    <h3>Gucci Bloom</h3>
+    <p>السعر: 5500 أوقية جديدة</p>
+    <button class="buy-btn" onclick="startOrder('Gucci Bloom',5500)">شراء</button>
+  </div>
+
+</div>
+<script>
+  function startOrder(name, price) {
+    localStorage.setItem('pendingProduct', JSON.stringify({name, price}));
+    window.location.href = 'checkout.html';
+  }
+</script>
 </body>
-</html>
+      </html>  
