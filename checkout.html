@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>إتمام الطلب</title>
-  
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
-  header { background-color: #222; color: white; padding: 20px; text-align: center; font-size: 22px; }
-  nav { background-color: #444; padding: 10px; text-align: center; }
-  nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
-  .container { padding: 20px; max-width: 600px; margin: auto; }
-  .product, .order, .form-group { background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  .product img { width: 100%; border-radius: 8px; }
-  .product h3, .order h3 { font-size: 18px; margin-bottom: 10px; }
-  .product p, .order p { font-size: 16px; }
-  .buy-btn, .submit-btn { background-color: #25d366; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-size: 16px; width: 100%; margin-top: 10px; }
-  .form-group input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
-  .button { display: inline-block; padding: 12px 25px; background-color: #25d366; color: white; text-decoration: none; border-radius: 5px; font-size: 18px; margin-top: 20px; }
-</style>
-
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; }
+    header { background-color: #222; color: white; padding: 20px; text-align: center; font-size: 24px; }
+    nav { background-color: #444; padding: 15px; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 18px; }
+    .container { max-width: 600px; margin: 20px auto; padding: 20px; }
+    .box {
+      background: white; padding: 20px; border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px;
+    }
+    .box label { display: block; font-size: 18px; margin-bottom: 8px; }
+    .box input {
+      width: 100%; padding: 12px; font-size: 16px;
+      border: 1px solid #ccc; border-radius: 6px; margin-bottom: 15px;
+    }
+    .submit-btn {
+      background-color: #25d366; color: white;
+      padding: 15px; width: 100%;
+      border: none; border-radius: 8px; font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>إتمام الطلب</header>
   <nav>
     <a href="index.html">الرئيسية</a>
+    <a href="contact.html">تواصل معنا</a>
     <a href="orders.html">الطلبات</a>
   </nav>
   <div class="container">
-    <div class="product" id="product-info"></div>
-    <div class="form-group">
+    <div class="box" id="product-info"></div>
+    <div class="box">
       <label>رقم الواتساب:</label>
-      <input type="text" id="phone" placeholder="مثال: 22231484257">
-    </div>
-    <div class="form-group">
+      <input type="text" id="phone" placeholder="مثال: 22231484257" />
       <label>الكمية:</label>
-      <input type="number" id="quantity" min="1" value="1">
+      <input type="number" id="quantity" min="1" value="1" />
+      <button class="submit-btn" onclick="submitOrder()">إرسال الطلب</button>
     </div>
-    <button class="submit-btn" onclick="submitOrder()">إرسال الطلب</button>
   </div>
+
   <script>
     const product = JSON.parse(localStorage.getItem('pendingProduct') || 'null');
     if (product) {
-      document.getElementById('product-info').innerHTML = `<h3>المنتج: ${product.name}</h3><p>السعر: ${product.price} أوقية جديدة</p>`;
+      document.getElementById('product-info').innerHTML = `
+        <h3>المنتج: ${product.name}</h3>
+        <p>السعر: ${product.price} أوقية جديدة</p>
+      `;
     }
+
     function submitOrder() {
-      const phone = document.getElementById('phone').value;
+      const phone = document.getElementById('phone').value.trim();
       const quantity = document.getElementById('quantity').value;
-      if (!phone || !quantity) {
-        alert('يرجى إدخال جميع البيانات');
+      if (!phone || quantity < 1) {
+        alert("يرجى إدخال رقم الواتساب والكمية بشكل صحيح.");
         return;
       }
+
       const orders = JSON.parse(localStorage.getItem('orders') || '[]');
-      orders.push({ ...product, phone, quantity, status: 'قيد المراجعة' });
+      orders.push({ ...product, phone, quantity, status: "قيد المراجعة" });
       localStorage.setItem('orders', JSON.stringify(orders));
       localStorage.removeItem('pendingProduct');
-      window.location.href = 'orders.html';
+      window.location.href = "orders.html";
     }
   </script>
 </body>
